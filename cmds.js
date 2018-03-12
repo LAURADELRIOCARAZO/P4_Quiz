@@ -82,12 +82,14 @@ exports.testCMD =(rl, id)=> {
 		return makeQuestion(rl, quiz.question)
 		.then(respuesta => {
 			if ( respuesta.toLowerCase().trim() === quiz.answer.toLowerCase().trim()){
-
 				log('CORRECTO', 'green');
+				log('CORRECT', 'green');
+
 				rl.prompt();
 			}else{
 
 				log('INCORRECTO', 'red');
+				log('INCORRECT', 'red');
 				rl.prompt();	
 			}
 
@@ -257,7 +259,6 @@ exports.quitCMD = rl => {
 	rl.close();
 
 }
-
 exports.creditsCMD = rl => {
         log('Autores de la práctica:', 'red');
 		log('Laura del Rio Carazo', 'green');

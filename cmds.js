@@ -82,13 +82,18 @@ exports.testCMD =(rl, id)=> {
 		return makeQuestion(rl, quiz.question)
 		.then(respuesta => {
 			if ( respuesta.toLowerCase().trim() === quiz.answer.toLowerCase().trim()){
+
 				log('CORRECTO', 'green');
-
-
+				log('CORRECT', 'green');
+				log('correct', 'green');
+				log('correcto', 'green');
 				rl.prompt();
 			}else{
 
 				log('INCORRECTO', 'red');
+				log('INCORRECT', 'red');
+				log('incorrect', 'red');
+				log('incorrecto', 'red');
 				rl.prompt();	
 			}
 
@@ -168,10 +173,16 @@ exports.playCMD = rl => {
 					score = score +1;
 					log(` Correcto. Tu puntuación es de: ${colorize(score, "yellow")} `);
 					log('CORRECTO', 'green');
+					log('CORRECT', 'green');
+					log('correct', 'green');
+					log('correcto', 'green');
 					preguntica();
 					}else{
 					
 						log('INCORRECTO', 'red');
+				log('INCORRECT', 'red');
+				log('incorrect', 'red');
+				log('incorrecto', 'red');
 					log(' Tu puntuación ha sido: ');
 					biglog(score, `yellow`);
 					log(' Fin ');
